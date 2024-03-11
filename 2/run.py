@@ -15,7 +15,7 @@ def index():
     return render_template('index.html')
 
 
-# Страница приветствия
+
 @app.route('/welcome')
 def welcome():
     username = request.cookies.get('username')
