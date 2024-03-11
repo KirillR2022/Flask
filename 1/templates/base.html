@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Мой интернет-магазин{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать в мой интернет-магазин</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/products">Товары</a></li>
+            <li><a href="/feedback">Отзывы</a></li>
+            <!-- Добавьте больше ссылок для навигации по мере необходимости -->
+        </ul>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Мой интернет-магазин. Все права защищены.</p>
+        <p>Подпишитесь на нас в социальных сетях:</p>
+        <ul class="social-links">
+            <li><a href="https://vk.com">Вконтакте</a></li>
+            <li><a href="https://facebook.com">Facebook</a></li>
+            <!-- Добавьте ссылки на другие социальные сети по аналогии -->
+        </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Страница приветствия
+{% endblock %}
+
+{% block content %}
+    <h1>Привет, {{ username }}!</h1>
+    <form action="/logout" method="get">
+        <button type="submit">Выйти</button>
+    </form>
+{% endblock %}
